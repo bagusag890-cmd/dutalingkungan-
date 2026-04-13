@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotak Saran & Laporan - Duta Inisiatif Jabar</title>
+    <meta name="description" content="Layanan Kotak Saran dan Laporan Duta Inisiatif Batch 14 Provinsi Jawa Barat.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dutif<span>Jabar14</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#latar-belakang">Latar Belakang</a></li>
+                <li><a href="struktur.html">Struktur</a></li>
+                <li><a href="program.html">Program Kerja</a></li>
+                <li><a href="saran.html">Layanan Laporan</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Layanan Laporan & Saran Section -->
+    <section id="saran" class="saran section-spacing" style="min-height: 100vh; padding-top: 120px;">
+        <div class="container scroll-element">
+            <div class="section-header">
+                <h2>Kotak Saran & Laporan</h2>
+                <div class="divider"></div>
+                <p>Suara Anda sangat berarti bagi kemajuan kami bersama.</p>
+            </div>
+            <div class="saran-grid">
+                <div class="saran-info">
+                    <div class="info-box glass">
+                        <i class="fas fa-bullhorn icon"></i>
+                        <h3>Mari Bersuara!</h3>
+                        <p>Kami sangat menghargai setiap saran, kritik, dan laporan dari masyarakat. Semua informasi yang Anda kirimkan akan menjadi bahan evaluasi yang berharga untuk langkah kami ke depan menuju Jawa Barat yang lebih baik.</p>
+                        <br>
+                        <p><strong>Privasi Terjaga:</strong> Identitas pelapor akan kami rahasiakan jika memilih untuk anonim.</p>
+                    </div>
+                </div>
+                <div class="saran-form-container glass">
+                    <form class="saran-form" action="https://formsubmit.co/dutainisiatifjabar14@gmail.com" method="POST" enctype="multipart/form-data">
+                        <!-- Konfigurasi FormSubmit -->
+                        <input type="hidden" name="_subject" value="Laporan/Saran Baru dari Website Dutif Jabar 14!">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="input-group">
+                            <label for="nama">Nama Lengkap (Boleh Samaran)</label>
+                            <input type="text" id="nama" name="Nama_Pengirim" placeholder="Masukkan nama" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="kategori">Kategori</label>
+                            <div class="select-wrapper">
+                                <select id="kategori" name="Kategori" required>
+                                    <option value="" disabled selected>Pilih Kategori...</option>
+                                    <option value="saran">💡 Saran & Masukan</option>
+                                    <option value="kritik">✍️ Kritik Membangun</option>
+                                    <option value="laporan">📢 Laporan/Aspirasi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="pesan">Pesan Anda</label>
+                            <textarea id="pesan" name="Pesan" rows="5" placeholder="Tuliskan pesan atau asprirasi Anda secara detail..." required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="lampiran">Unggah Bukti Foto / Dokumen (Opsional)</label>
+                            <div style="background: rgba(255,255,255,0.5); padding: 10px; border-radius: 8px; border: 1px dashed var(--primary);">
+                                <input type="file" id="lampiran" name="Lampiran_Bukti" accept="image/*,.pdf,.doc,.docx" style="width: 100%; cursor: pointer;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Dutif<span>Jabar14</span></h2>
+                    <p>Berinisiatif, Mengabdi, Menginspirasi.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/dutainisiatif.jabar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@haise1772?_r=1&_t=ZS-95TIzIZMtVq" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:dutainisiatifjabar14@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Duta Inisiatif Batch 14 Jawa Barat. Dibuat dengan 💙.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Mobile fix for program cards */
+@media (max-width: 600px) {
+    .detailed-programs {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+        padding: 0 4px;
+    }
+    .program-card.detailed-card {
+        border-radius: 14px;
+    }
+    .program-info {
+        padding: 1.2rem;
+    }
+    .role-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .program-content h4 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .task-list li {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+    #program {
+        padding-top: 100px !important;
+    }
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}

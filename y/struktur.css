@@ -1,0 +1,417 @@
+/* =====================
+   IG POST CARD STYLES
+   ===================== */
+.ig-posts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.ig-post-card {
+    background: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ig-post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary);
+}
+
+/* Header */
+.igp-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 10px;
+}
+
+.igp-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    flex-shrink: 0;
+}
+
+.igp-user-info {
+    flex-grow: 1;
+}
+
+.igp-username {
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.igp-location {
+    font-size: 11px;
+    color: #a8a8a8;
+}
+
+.igp-more {
+    color: #a8a8a8;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Image — kotak sempurna seperti grid Instagram */
+.igp-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #111;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.igp-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ig-post-card:hover .igp-image img {
+    transform: scale(1.05);
+}
+
+/* Instagram Embed card */
+.igp-embed-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #000;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.igp-embed-image blockquote {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder "Lihat di Instagram" di dalam .igp-image */
+.igp-image>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+/* =====================
+   SLIDER STYLES
+   ===================== */
+.igp-slider { position: relative; background: #000; }
+.igp-slider .slide {
+    display: none;
+    position: absolute;
+    inset: 0;
+}
+.igp-slider .slide.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.igp-slider .slide img,
+.igp-slider .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    width: 30px;
+    height: 44px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.slide-btn:hover { background: rgba(0,0,0,0.75); }
+.slide-btn.prev { left: 6px; }
+.slide-btn.next { right: 6px; }
+.slide-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+.dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.dot.active { background: #fff; }
+
+/* Actions */
+.igp-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px 6px;
+}
+
+.igp-actions-left {
+    display: flex;
+    gap: 14px;
+}
+
+.igp-action-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.15s;
+    padding: 0;
+}
+
+.igp-action-btn:hover {
+    transform: scale(1.15);
+}
+
+.igp-action-btn.liked {
+    color: #ed4956 !important;
+}
+
+.igp-action-btn.saved {
+    color: #fff;
+}
+
+/* Likes count */
+.igp-likes {
+    padding: 0 14px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Caption */
+.igp-caption {
+    padding: 0 14px 10px;
+    font-size: 13px;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+.igp-caption strong {
+    color: #fff;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.igp-caption .caption-toggle {
+    color: #a8a8a8;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.igp-caption .caption-full {
+    display: none;
+}
+
+.igp-caption.expanded .caption-full {
+    display: block;
+}
+
+.igp-caption.expanded .caption-short {
+    display: none;
+}
+
+/* Comment section */
+.igp-comments {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: none;
+    padding: 8px 14px 10px;
+}
+
+.igp-comments.open {
+    display: block;
+}
+
+.igp-comments-list {
+    max-height: 100px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+    scrollbar-width: thin;
+}
+
+.igp-comment-item {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.igp-comment-item strong {
+    color: #fff;
+    margin-right: 4px;
+}
+
+.igp-comment-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 6px 12px;
+}
+
+.igp-comment-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.igp-comment-input::placeholder {
+    color: #888;
+}
+
+.igp-comment-submit {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.igp-comment-submit.active {
+    opacity: 1;
+}
+
+/* Profile header wrapper */
+.profile-section {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 768px) {
+    .ig-posts-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .igp-username {
+        font-size: 11px;
+    }
+
+    .igp-caption {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ig-posts-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 4px;
+    }
+
+    .ig-profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .ig-profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ig-username {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .ig-username h3 {
+        font-size: 1rem;
+    }
+
+    .ig-stats {
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .ig-follow-btn,
+    .ig-msg-btn {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.8rem;
+    }
+}
+
+/* Program page mobile fix */
+@media (max-width: 600px) {
+    .detailed-programs {
+        grid-template-columns: 1fr !important;
+    }
+
+    .program-card.detailed-card {
+        margin: 0 4px;
+    }
+
+    .role-title {
+        font-size: 1.3rem;
+    }
+
+    .task-list li {
+        font-size: 0.9rem;
+    }
+}

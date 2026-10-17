@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    image: ${IMAGE_NAME:-group08/dutifjabar14:week6}
+    container_name: dutifjabar14-web
+    ports:
+      - "${HOST_PORT:-8081}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
